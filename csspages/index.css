@@ -1,0 +1,66 @@
+body{
+  background-color: #000;
+  color: white;
+  margin: 0;
+}
+.nav-bar{
+  flex:wrap;
+  background-color: #004080;
+  margin-top: 0px;
+  height: 45px;
+  text-align: right;
+  align-content: center;
+}
+.nav-bar-anchr-tags{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  margin-top:5px;
+  margin: 15px 20px 5px 20px;
+}
+.intro-section{
+  display: flex;
+  justify-content: space-between;
+  gap:40px;
+
+}
+.intro-info{
+  justify-content: space-around;
+  margin-left:200px;
+  margin-top:60px;
+}
+#name-text{
+  font-size:50px;
+  font-family: 'orbitron';
+}
+#hero-section-text{
+  flex:1;
+  font-size:16px;
+  width: 700px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#intro-img{
+  height: 350px;
+  width:250px;
+  margin-top:100px;
+  margin-right:175px;
+}
+.skills-info-section{
+  background-color: green;
+  margin-top:80px;
+  border-radius:0px 50px 50px 0px;
+  height: 500px;
+  width:800px;
+}
+.projects-section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-container{
+  background-color: greenyellow;
+  height: 500px;
+  width: 800px;
+}
