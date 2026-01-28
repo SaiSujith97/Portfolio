@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: #000;
   color: white;
@@ -53,7 +56,14 @@ body{
   height: 500px;
   width:800px;
 }
-.projects-section{
+.education-details-grid{
+  display: grid;
+  grid-template-columns: 70px ;
+  column-gap:10px;
+  row-gap: 10px;
+  align-items:center;
+}
+#projects-section{
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -63,4 +73,21 @@ body{
   background-color: greenyellow;
   height: 500px;
   width: 800px;
+}
+#achivements-section{
+  display:flex;
+  justify-content: flex-end;
+}
+.achivements-container{
+  background-color: green;
+  margin-top:80px;
+  border-radius:50px 0px 0px 50px;
+  height: 500px;
+  width:800px;
+}
+#footer-section{
+  background-color:#004080;
+  height: 100px;
+  width: 100%;
+  margin-top: 40px;
 }
