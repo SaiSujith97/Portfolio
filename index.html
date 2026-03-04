@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bree+Serif&family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&family=Varela+Round&family=Yellowtail&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bree+Serif&family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&family=Varela+Round&family=Yellowtail&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/index.css">
   <title>Portfolio</title>
 </head>
+
 <body>
+  <div id="cursor-glow"></div>
+
   <nav class="nav-bar">
     <img src="" alt="">
     <a href="\" class="nav-bar-anchr-tags">Home</a>
@@ -22,42 +30,186 @@
 
   <div class="intro-section">
     <div class="intro-info">
-    <p id="name-text" >  
-        Hello!<br>
-        I'm Sujith</p>
-    <p id="hero-section-text" >I am a Second-year Computer Science undergraduate student focused on full-stack web development, working with HTML, CSS, JavaScript, Python and SQL. <br>Currently preparing for full-stack internships while building toward a long-term path in AI and Machine Learning.</p>
+      <h1 id="intro-greeting">Hello!</h1>
+      <h2 id="name-text">I'm <span class="name-highlight">Sujith</span></h2>
+      <p id="hero-section-text">
+        I am a Second-year <span class="highlight-text">Computer Science</span> undergraduate student focused on <span
+          class="highlight-text">full-stack web
+          development</span>, working with HTML, CSS, JavaScript, Python and SQL. <br>Currently preparing for full-stack
+        internships while building toward a long-term path in <span class="highlight-text">AI</span> and <span
+          class="highlight-text">Machine Learning</span>.
+      </p>
     </div>
     <div class="intro-img">
-      <img src="images/temp_img.jpg" id="intro-img">
+      <img src="images/hero_bg_v2.jpg" id="intro-img" alt="Abstract background">
     </div>
   </div>
 
-  <section id="hero-section">
+  <section id="hero-section" class="section-container">
+    <h2 class="section-title">Skills & Education</h2>
+    <div class="hero-grid-container">
 
-  <div class="skills-info-section">
-    <h2>Education</h2>
-      <p class="education-details-grid">
-        B-tech     
-         Intermediate 2022-2024  <br>
-        SSC          2011-2022  
-      </p>
-      <p class="education-details-grid"> 2024-pursuing</p> 
-  </div>
+      <!-- Left side: Education -->
+      <div class="education-card glass-panel section-hidden">
+        <h3>Education</h3>
+        <div class="education-grid">
+          <div class="edu-row">
+            <span class="edu-degree">B-Tech</span>
+            <span class="edu-year">2024 - Pursuing</span>
+            <span class="edu-college">XYZ University</span>
+          </div>
+          <div class="edu-row">
+            <span class="edu-degree">Intermediate</span>
+            <span class="edu-year">2022 - 2024</span>
+            <span class="edu-college">ABC Junior College</span>
+          </div>
+          <div class="edu-row">
+            <span class="edu-degree">SSC</span>
+            <span class="edu-year">2021 - 2022</span>
+            <span class="edu-college">DEF High School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: Skills -->
+      <div class="skills-card glass-panel section-hidden">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="devicon-html5-plain" style="font-size: 3rem; color: #E34F26;"></i>
+            <span class="skill-name">HTML</span>
+          </div>
+          <div class="skill-item">
+            <i class="devicon-css3-plain" style="font-size: 3rem; color: #1572B6;"></i>
+            <span class="skill-name">CSS</span>
+          </div>
+          <div class="skill-item">
+            <i class="devicon-javascript-plain" style="font-size: 3rem; color: #F7DF1E;"></i>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <i class="devicon-python-plain" style="font-size: 3rem; color: #3776AB;"></i>
+            <span class="skill-name">Python</span>
+          </div>
+          <div class="skill-item">
+            <i class="devicon-mysql-plain" style="font-size: 3rem; color: #4479A1;"></i>
+            <span class="skill-name">SQL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
-  <section id="projects-section">
-  <div class="projects-container">
-  </div>
+  <section id="projects-section" class="section-container">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+
+      <!-- Project 1 (Odd: Image Left, Label Right -> Arrow points Right) -->
+      <div class="project-card section-hidden" data-id="1">
+        <div class="project-image-container">
+          <img src="images/project_1.jpg" alt="AI Project">
+        </div>
+        <div class="project-label right-facing">
+          <span>Neural Net Visualizer</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <!-- Project 2 (Even: Image Right, Label Left -> Arrow points Left) -->
+      <div class="project-card section-hidden" data-id="2" style="transition-delay: 100ms;">
+        <div class="project-image-container">
+          <img src="images/project_2.jpg" alt="Web Dev Project">
+        </div>
+        <div class="project-label left-facing">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Global E-Commerce</span>
+        </div>
+      </div>
+
+      <!-- Project 3 (Odd: Image Left, Label Right -> Arrow points Right) -->
+      <div class="project-card section-hidden" data-id="3" style="transition-delay: 200ms;">
+        <div class="project-image-container">
+          <img src="images/project_3.jpg" alt="Backend Project">
+        </div>
+        <div class="project-label right-facing">
+          <span>Scalable API Service</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <!-- Project 4 (Even: Image Right, Label Left -> Arrow points Left) -->
+      <div class="project-card section-hidden" data-id="4" style="transition-delay: 300ms;">
+        <div class="project-image-container">
+          <img src="images/project_4.jpg" alt="Frontend Project">
+        </div>
+        <div class="project-label left-facing">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Modern UI Framework</span>
+        </div>
+      </div>
+
+    </div>
   </section>
 
-  <section id="achivements-section">
-    <div class="achivements-container">
-
+  <section id="achivements-section" class="section-container">
+    <h2 class="section-title">Achievements</h2>
+    <div class="timeline section-hidden">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Hackathon Winner 2024</h4>
+          <p>First place in the National AI Hackathon</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Open Source Contributor</h4>
+          <p>Merged 50+ PRs to major frontend libraries</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Top 1% Class Rank</h4>
+          <p>Maintained a perfect GPA throughout the year</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer id="footer-section">
-
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="devicon-github-original"
+            style="font-size: 2rem; color: #fff;"></i></a>
+        <a href="#" class="social-icon"><i class="devicon-linkedin-plain"
+            style="font-size: 2rem; color: #0077b5;"></i></a>
+        <a href="#" class="social-icon"><i class="devicon-twitter-original"
+            style="font-size: 2rem; color: #1DA1F2;"></i></a>
+      </div>
+      <p class="copyright">&copy; 2026 Sujith. Built with passion.</p>
+    </div>
   </footer>
+
+  <!-- Project Modal Layout -->
+  <div class="modal-overlay hidden" id="modal-overlay"></div>
+  <div class="project-modal hidden" id="project-modal">
+    <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-content">
+      <img src="" alt="Project Display" id="modal-img">
+      <h2 id="modal-title">Project Title</h2>
+      <p id="modal-desc">Detailed project description will appear here after clicking.</p>
+
+      <div class="modal-tech-stack" id="modal-tech">
+        <!-- Dynamic tags injected here -->
+      </div>
+      <a href="#" class="view-btn">View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+  </div>
+
+  <!-- Include animation script -->
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
