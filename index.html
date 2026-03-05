@@ -16,6 +16,13 @@
 </head>
 
 <body>
+  <!-- Geometric Background -->
+  <div class="bg-geometry">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
   <div id="cursor-glow"></div>
 
   <nav class="nav-bar">
@@ -26,7 +33,6 @@
     <a href="#achivements-section" class="nav-bar-anchr-tags">Achivements</a>
     <a href="#footer-section" class="nav-bar-anchr-tags">Contact</a>
   </nav>
-
 
   <div class="intro-section">
     <div class="intro-info">
@@ -46,10 +52,10 @@
   </div>
 
   <section id="hero-section" class="section-container">
-    <h2 class="section-title">Skills & Education</h2>
+    <h2 class="section-title">About Me</h2>
     <div class="hero-grid-container">
 
-      <!-- Left side: Education -->
+      <!-- Education -->
       <div class="education-card glass-panel section-hidden">
         <h3>Education</h3>
         <div class="education-grid">
@@ -71,29 +77,71 @@
         </div>
       </div>
 
-      <!-- Right side: Skills -->
+      <!-- Skills -->
       <div class="skills-card glass-panel section-hidden">
         <h3>Skills</h3>
         <div class="skills-grid">
           <div class="skill-item">
-            <i class="devicon-html5-plain" style="font-size: 3rem; color: #E34F26;"></i>
+            <i class="devicon-html5-plain" style="font-size: 2.5rem; color: #E34F26;"></i>
             <span class="skill-name">HTML</span>
           </div>
           <div class="skill-item">
-            <i class="devicon-css3-plain" style="font-size: 3rem; color: #1572B6;"></i>
+            <i class="devicon-css3-plain" style="font-size: 2.5rem; color: #1572B6;"></i>
             <span class="skill-name">CSS</span>
           </div>
           <div class="skill-item">
-            <i class="devicon-javascript-plain" style="font-size: 3rem; color: #F7DF1E;"></i>
+            <i class="devicon-javascript-plain" style="font-size: 2.5rem; color: #F7DF1E;"></i>
             <span class="skill-name">JavaScript</span>
           </div>
           <div class="skill-item">
-            <i class="devicon-python-plain" style="font-size: 3rem; color: #3776AB;"></i>
+            <i class="devicon-python-plain" style="font-size: 2.5rem; color: #3776AB;"></i>
             <span class="skill-name">Python</span>
           </div>
           <div class="skill-item">
-            <i class="devicon-mysql-plain" style="font-size: 3rem; color: #4479A1;"></i>
+            <i class="devicon-mysql-plain" style="font-size: 2.5rem; color: #4479A1;"></i>
             <span class="skill-name">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="experience-card glass-panel section-hidden">
+        <h3>Experience</h3>
+        <div class="education-grid">
+          <div class="edu-row">
+            <span class="edu-degree">Frontend Dev (Freelance)</span>
+            <span class="edu-year">2024 - Present</span>
+            <span class="edu-college">Self-Employed</span>
+          </div>
+          <div class="edu-row">
+            <span class="edu-degree">Web Dev Intern</span>
+            <span class="edu-year">Summer 2023</span>
+            <span class="edu-college">Tech Solutions Inc.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="languages-card glass-panel section-hidden">
+        <h3>Languages</h3>
+        <div class="lang-grid">
+          <div class="lang-item">
+            <span class="lang-name">English</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Telugu</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Hindi</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%;"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -206,6 +254,23 @@
       </div>
       <a href="#" class="view-btn">View Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     </div>
+  </div>
+
+  <!-- Floating Chatbot Contacts Menu -->
+  <div class="floating-menu" id="floating-menu">
+    <div class="menu-items">
+      <a href="#" class="menu-item" title="Email"><i class="fa-solid fa-envelope"></i><span
+          class="item-tooltip">Email</span></a>
+      <a href="#" class="menu-item" title="GitHub"><i class="devicon-github-original"></i><span
+          class="item-tooltip">GitHub</span></a>
+      <a href="#" class="menu-item" title="LinkedIn"><i class="devicon-linkedin-plain"></i><span
+          class="item-tooltip">LinkedIn</span></a>
+      <a href="#" class="menu-item" title="Twitter"><i class="devicon-twitter-original"></i><span
+          class="item-tooltip">Twitter</span></a>
+    </div>
+    <button class="chatbot-btn" id="chatbot-btn">
+      <i class="fa-solid fa-message"></i>
+    </button>
   </div>
 
   <!-- Include animation script -->

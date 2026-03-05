@@ -134,7 +134,24 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('mousemove', (e) => {
             const x = e.clientX;
             const y = e.clientY;
-            glowElement.style.transform = `translate(${x}px, ${y}px)`;
+            glowElement.style.transform = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
+        });
+    }
+
+    // Floating Chatbot Menu Toggle
+    const chatbotBtn = document.getElementById('chatbot-btn');
+    const floatingMenu = document.getElementById('floating-menu');
+    if (chatbotBtn && floatingMenu) {
+        chatbotBtn.addEventListener('click', () => {
+            floatingMenu.classList.toggle('active');
+            const icon = chatbotBtn.querySelector('i');
+            if (floatingMenu.classList.contains('active')) {
+                icon.classList.remove('fa-message');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-message');
+            }
         });
     }
 });
