@@ -52,31 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDesc = document.getElementById('modal-desc');
     const modalTech = document.getElementById('modal-tech');
 
-    // Dummy data dictionary (In a real app, this might come from a JSON file or API)
+    // Project data extracted from resume
     const projectData = {
         '1': {
-            title: 'Neural Net Visualizer',
+            title: 'SmartQueue',
             image: 'images/project_1.jpg',
-            desc: 'An interactive visualization tool allowing users to build, train, and watch the learning process of deep neural networks in real-time right in the browser. Built to demystify AI architecture.',
-            tech: ['Python', 'TensorFlow.js', 'React', 'D3.js']
+            desc: 'Developed a React Native app for digital OPD queue and appointment management. Integrated AI-based symptom triage to auto-assign medical departments and a QR-based token system with real-time tracking.',
+            tech: ['React Native', 'AI Integration', 'QR System']
         },
         '2': {
-            title: 'Global E-Commerce',
+            title: 'EVCONNECT',
             image: 'images/project_2.jpg',
-            desc: 'A full-stack, highly scalable global marketplace application supporting multi-currency payments, international shipping APIs, and a sleek modern dashboard for vendors.',
-            tech: ['Node.js', 'Express', 'MongoDB', 'Stripe API']
+            desc: 'Designed a platform connecting EV users with nearby home chargers. Enabled map-based discovery and slot booking. Developed concept for decentralized network and designed clean UI/UX using Antigravity.',
+            tech: ['Antigravity', 'UI/UX Design', 'Maps API']
         },
         '3': {
-            title: 'Scalable API Service',
+            title: 'Smart Pill Dispenser',
             image: 'images/project_3.jpg',
-            desc: 'A robust, load-balanced backend architecture built to handle millions of requests per minute. Features advanced rate limiting, Redis caching layers, and comprehensive test coverage.',
-            tech: ['Go', 'Redis', 'Docker', 'Kubernetes']
-        },
-        '4': {
-            title: 'Modern UI Framework',
-            image: 'images/project_4.jpg',
-            desc: 'An open-source, lightweight CSS framework designed for building ultra-fast dashboard interfaces. It strips away bloat and focuses on a strict, professional design language.',
-            tech: ['Sass', 'HTML5', 'PostCSS']
+            desc: 'Automated medication dispensing system based on user-defined schedules. Implemented reminder notifications and caregiver alerts to reduce missed doses. Designed the workflow including time monitoring and dispensing mechanism.',
+            tech: ['Hardware/IoT', 'Systems Design']
         }
     };
 
@@ -184,5 +178,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 themeIcon.classList.add('fa-sun');
             }
         });
+    }
+
+    // Resume Popup Logic
+    const resumePopup = document.getElementById('resume-popup');
+    if (resumePopup) {
+        setTimeout(() => {
+            resumePopup.classList.add('show');
+            setTimeout(() => {
+                resumePopup.classList.remove('show');
+            }, 4500); // 4.5 seconds visibility
+        }, 500); // appear 500ms after load
     }
 });
