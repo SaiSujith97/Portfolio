@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hiddenElements.forEach((el) => scrollObserver.observe(el));
 
     // Optional navigation scroll offset handling for fixed header if needed
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
@@ -51,20 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modal-title');
     const modalDesc = document.getElementById('modal-desc');
     const modalTech = document.getElementById('modal-tech');
+    const modalLink = document.getElementById('modal-link');
 
     // Project data extracted from resume
     const projectData = {
         '1': {
             title: 'SmartQueue',
-            image: 'images/project_1.jpg',
+            image: 'images/Q_Management_Logo.jpg',
             desc: 'Developed a React Native app for digital OPD queue and appointment management. Integrated AI-based symptom triage to auto-assign medical departments and a QR-based token system with real-time tracking.',
-            tech: ['React Native', 'AI Integration', 'QR System']
+            tech: ['React Native', 'AI Integration', 'QR System'],
+            link: 'https://smart-queue-management-psi.vercel.app/'
         },
         '2': {
             title: 'EVCONNECT',
-            image: 'images/project_2.jpg',
+            image: 'images/EV_Connect_Logo.jpg',
             desc: 'Designed a platform connecting EV users with nearby home chargers. Enabled map-based discovery and slot booking. Developed concept for decentralized network and designed clean UI/UX using Antigravity.',
-            tech: ['Antigravity', 'UI/UX Design', 'Maps API']
+            tech: ['Antigravity', 'UI/UX Design', 'Maps API'],
+            link: 'https://saisujith97.github.io/EV-Connect/'
         },
         '3': {
             title: 'Smart Pill Dispenser',
@@ -91,6 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
             span.textContent = techStr;
             modalTech.appendChild(span);
         });
+
+        // Set Link
+        if (data.link) {
+            modalLink.href = data.link;
+            modalLink.style.display = 'inline-flex';
+        } else {
+            modalLink.href = '#';
+            modalLink.style.display = 'none';
+        }
 
         // Show Modal
         modal.classList.remove('hidden');
