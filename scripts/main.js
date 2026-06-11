@@ -12,11 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('section-visible');
-                // Optional: Stop observing once it has animated in once
-                // observer.unobserve(entry.target);
-            } else {
-                // Optional: Remove class if you want the animation to repeat on scroll up/down
-                entry.target.classList.remove('section-visible');
+                observer.unobserve(entry.target); // Stop observing once it has animated in once
             }
         });
     }, observerOptions);
@@ -134,14 +130,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Dynamic Cursor Glow Tracking
+    // Dynamic Cursor Glow Tracking with requestAnimationFrame Interpolation
     const glowElement = document.getElementById('cursor-glow');
-    if (glowElement) {
+    if (glowElement && window.matchMedia('(hover: hover)').matches) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let glowX = mouseX;
+        let glowY = mouseY;
+        const speed = 0.08; // smooth trailing speed
+        let hasMoved = false;
+
         document.addEventListener('mousemove', (e) => {
-            const x = e.clientX;
-            const y = e.clientY;
-            glowElement.style.transform = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            hasMoved = true;
         });
+
+        function animateGlow() {
+            if (hasMoved) {
+                glowX += (mouseX - glowX) * speed;
+                glowY += (mouseY - glowY) * speed;
+                glowElement.style.transform = `translate(calc(${glowX}px - 50%), calc(${glowY}px - 50%))`;
+            }
+            requestAnimationFrame(animateGlow);
+        }
+        requestAnimationFrame(animateGlow);
+    } else if (glowElement) {
+        glowElement.style.display = 'none';
     }
 
     // Floating Chatbot Menu Toggle
@@ -189,6 +204,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 themeIcon.classList.remove('fa-moon');
                 themeIcon.classList.add('fa-sun');
             }
+        });
+    }
+
+    // Mobile Navigation Menu Drawer Toggle
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (menuToggle.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close drawer when clicking a link
+        document.querySelectorAll('.nav-bar-anchr-tags').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
         });
     }
 
