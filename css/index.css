@@ -26,6 +26,26 @@ body.light-theme {
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(0, 0, 0, 0.1);
   background-image: radial-gradient(var(--accent-slate) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Background elements in light mode */
+body.light-theme .shape {
+  border-color: rgba(0, 123, 181, 0.15);
+}
+body.light-theme .shape-1,
+body.light-theme .shape-4,
+body.light-theme .shape-6 {
+  border-color: rgba(255, 123, 0, 0.15);
+}
+body.light-theme .shape-2,
+body.light-theme .shape-5,
+body.light-theme .shape-7 {
+  border-color: rgba(0, 123, 181, 0.15);
+}
+body.light-theme .shape-3,
+body.light-theme .shape-8 {
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 html {
@@ -1434,4 +1454,96 @@ body.light-theme .progress {
 
 .experience-bullets li:last-child {
   margin-bottom: 0;
+}
+
+/* Certifications Section Styling */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: linear-gradient(145deg, rgba(25, 25, 25, 0.4), rgba(10, 10, 10, 0.8));
+}
+
+.cert-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 123, 181, 0.25);
+  border-color: var(--accent-blue);
+}
+
+.cert-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background: rgba(0, 123, 181, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: var(--accent-blue);
+  border: 1px solid rgba(0, 123, 181, 0.2);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.cert-card:hover .cert-icon {
+  background: var(--accent-blue);
+  color: #ffffff;
+  transform: rotate(10deg);
+}
+
+.cert-info {
+  text-align: left;
+}
+
+.cert-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.cert-issuer {
+  margin: 0 0 5px 0;
+  font-size: 0.9rem;
+  color: var(--accent-lime);
+  font-weight: 500;
+}
+
+.cert-date {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Light Theme styles for Certifications & Footer Section */
+body.light-theme .cert-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 245, 250, 0.85)) !important;
+  box-shadow: 0 10px 30px rgba(0, 123, 181, 0.05);
+}
+
+body.light-theme .cert-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 123, 181, 0.15);
+  border-color: var(--accent-blue);
+}
+
+body.light-theme .cert-icon {
+  background: rgba(0, 123, 181, 0.05);
+}
+
+body.light-theme .cert-card:hover .cert-icon {
+  background: var(--accent-blue);
+  color: #ffffff;
+}
+
+body.light-theme #footer-section {
+  background: rgba(240, 245, 250, 0.95);
+  border-top-color: rgba(0, 123, 181, 0.15);
 }
