@@ -52,24 +52,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // Project data extracted from resume
     const projectData = {
         '1': {
-            title: 'SmartQueue',
-            image: 'images/Q_Management_Logo.jpg',
-            desc: 'Developed a React Native app for digital OPD queue and appointment management. Integrated AI-based symptom triage to auto-assign medical departments and a QR-based token system with real-time tracking.',
-            tech: ['React Native', 'AI Integration', 'QR System'],
-            link: 'https://smart-queue-management-psi.vercel.app/'
+            title: 'GST RAG Assistant',
+            image: 'images/gst_rag_logo.png',
+            desc: [
+                'Built an entire RAG application to retrieve answers to queries in GST Acts and Rules.',
+                'Improved retrieval by Cross-Encoder reranking and using Streamlit interface to interact with the retrieval model through chat.',
+                'Optimized and tested iteratively to achieve manual retrieval accuracy of 85%.'
+            ],
+            tech: ['Python', 'Streamlit', 'ChromaDB', 'Sentence Transformer', 'OpenRouter'],
+            link: ''
         },
         '2': {
+            title: 'SmartQueue — Healthcare App Architecture',
+            image: 'images/Q_Management_Logo.jpg',
+            desc: [
+                'Engineered a high-performance cross-platform React Native application designed for real-time digital outpatient department (OPD) queue tracking and comprehensive clinic appointment booking systems.',
+                'Integrated an intelligent AI-based symptom classification module that parses patient inputs to automatically route cases to appropriate medical specialties, slashing manual triage overhead.',
+                'Designed and implemented a tamper-proof QR-code token framework enabling real-time queue position tracking, live processing updates, and push notifications for status updates.'
+            ],
+            tech: ['React Native', 'AI Symptom Triage', 'Real-Time Database'],
+            link: 'https://smart-queue-management-psi.vercel.app/'
+        },
+        '3': {
             title: 'EVCONNECT',
             image: 'images/EV_Connect_Logo.jpg',
             desc: 'Designed a platform connecting EV users with nearby home chargers. Enabled map-based discovery and slot booking. Developed concept for decentralized network and designed clean UI/UX using Antigravity.',
             tech: ['Antigravity', 'UI/UX Design', 'Maps API'],
             link: 'https://saisujith97.github.io/EV-Connect/'
         },
-        '3': {
-            title: 'Smart Pill Dispenser',
+        '4': {
+            title: 'Smart Pill Dispenser System',
             image: 'images/project_3.jpg',
-            desc: 'Automated medication dispensing system based on user-defined schedules. Implemented reminder notifications and caregiver alerts to reduce missed doses. Designed the workflow including time monitoring and dispensing mechanism.',
-            tech: ['Hardware/IoT', 'Systems Design']
+            desc: [
+                'Designed a hardware-software workflow system that handles real-time scheduling logic and precise physical mechanisms to automatically release prescription medications based on user configurations.',
+                'Developed an asynchronous notification engine pushing instant SMS alerts and dedicated caregiver notifications to drastically minimize missed medication dosages and improve chronic care compliance.'
+            ],
+            tech: ['IoT Integration', 'Notification Engines', 'Workflow Logic'],
+            link: ''
         }
     };
 
@@ -80,7 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Populate Modal
         modalImg.src = data.image;
         modalTitle.textContent = data.title;
-        modalDesc.textContent = data.desc;
+        
+        // Handle array or string description
+        if (Array.isArray(data.desc)) {
+            modalDesc.innerHTML = `<ul style="margin: 10px 0 0 15px; padding: 0; list-style-type: disc;">${data.desc.map(bullet => `<li style="margin-bottom: 8px; color: var(--text-secondary); line-height: 1.5; font-size: 0.95rem; text-align: left;">${bullet}</li>`).join('')}</ul>`;
+        } else {
+            modalDesc.textContent = data.desc;
+        }
 
         // Populate Tech Tags
         modalTech.innerHTML = '';

@@ -1,0 +1,51 @@
+Venkata Sai Sujith Palivela
+pvsaisujith@gmail.com|LinkedIn|/gtbGitHub|/g♀bePortfolio|/ne+91-7671012995
+Summary
+Computer Science undergraduate passionate about Artificial Intelligence and Machine Learning. Built a GST-focused
+Retrieval-Augmented Generation (RAG) system during an AI/ML internship at IIT Hyderabad.
+Education
+• Swarna Bharathi Institute of Science & T echnologyKhammam, India
+B.Tech in Computer Science and Engineering—CGPA: 8.7 2024 – Present
+• S R Junior College Telangana, India
+Intermediate (Class XII)—Percentage: 84% 2022 – 2024
+• V.V. Central Public School India
+Secondary School (Class X)—Percentage: 75% 2011 – 2022
+Experience
+• AI/ML Intern May 2026 – July 2026
+IIT Hyderabad Hyderabad, India
+–Designed a Retrieval-Augmented Generation (RAG) model for Question Answering on Legal Texts with a focus on
+Generating answers to queries based on GST.
+–Enforced semantic retrieval with ChromaDB, Sentence Transformers and Cross-Encoder reranking.
+–Built a Streamlit-based conversational interface with support for multiple LLMs.
+Projects
+• GST RAG Assistant
+Python|Streamlit|ChromaDB|Sentence Transformer|OpenRouter
+–Built an entire RAG application to retrieve answers to queries in GST Acts and Built
+–Improved retrieval by Cross-Encoder reranking and using Streamlit interface to interact with the retrieval model
+through chat.
+–Optimized and tested iteratively to achieve manual retrieval accuracy of 85%.
+• SmartQueue — Healthcare App Architecture
+React Native|AI Symptom Triage|Real-Time Database
+–Engineered a high-performance cross-platform React Native application designed for real-time digital outpatient
+department (OPD) queue tracking and comprehensive clinic appointment booking systems.
+–Integrated an intelligent AI-based symptom classification module that parses patient inputs to automatically route
+cases to appropriate medical specialties, slashing manual triage overhead.
+–Designed and implemented a tamper-proof QR-code token framework enabling real-time queue position tracking,
+live processing updates, and push notifications for status updates.
+• Smart Pill Dispenser System
+IoT Integration|Notification Engines|Workflow Logic
+–Designed a hardware-software workflow system that handles real-time scheduling logic and precise physical mecha-
+nisms to automatically release prescription medications based on user configurations.
+–Developed an asynchronous notification engine pushing instant SMS alerts and dedicated caregiver notifications to
+drastically minimize missed medication dosages and improve chronic care compliance.
+Technical Skills and Interests
+•Languages:Python, JavaScript, SQL, HTML, CSS.
+•AI/ML Architecture:Retrieval-Augmented Generation (RAG), Sentence Transformers, Vector Embeddings, Ma-
+chine Learning.
+•Developer T ools & Platforms:Git, GitHub, Supabase, Antigravity, Figma UI/UX Design.
+•Areas of Interest:Generative AI Systems, Full Stack Web Architecture.
+Achievements & Hackathons
+•Finalist at MumbaiHacks 2025— Competed in the grand finale of a high-stakes hackathon focusing on building
+production-ready Agentic AI systems within the healthtech space.
+•District-Level Ideathon Competitor— Pitched innovative technical solutions and presented proofs-of-concept
+targeting structural workflows to regional evaluation panels.
